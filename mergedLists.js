@@ -16,7 +16,6 @@ function mergeKLists(lists) {
         for (let i = 0; i < lists.length; i += 2) {
             const list1 = lists[i];
             const list2 = i + 1 < lists.length ? lists[i + 1] : null;
-
             mergedLists.push(mergeTwoLists(list1, list2));
         }
 
@@ -31,24 +30,13 @@ function mergeTwoLists(l1, l2) {
     let current = dummy;
 
     while (l1 !== null && l2 !== null) {
-        if (l1.val < l2.val) {
-            current.next = l1;
-            l1 = l1.next;
-        } else {
-            current.next = l2;
-            l2 = l2.next;
-        }
-
+        const selectedList = l1.val < l2.val ? l1 : l2;
+        current.next = selectedList;
+        selectedList === l1 ? (l1 = l1.next) : (l2 = l2.next);
         current = current.next;
     }
 
-    if (l1 !== null) {
-        current.next = l1;
-    }
-
-    if (l2 !== null) {
-        current.next = l2;
-    }
+    current.next = l1 !== null ? l1 : l2;
 
     return dummy.next;
 }

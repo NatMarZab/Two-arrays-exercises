@@ -10,6 +10,8 @@ Exercise
 Write a command line program (Node, PHP) that given an array of integers as an argument
 returns the correct answer. The input will be provided as a comma separated list of integers:
 1,34,5,1.
+### Command line execution
+node rainWater.js
 
 # Problem 2 -> mergedLists.js
 We have a collection of linked lists. Each linked list contains integers in ascending order. We
@@ -20,3 +22,5 @@ Output: [1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6]
 Exercise
 Write a command line program (Node, PHP) that given an input returns the correct answer. The
 format of the inputs and outputs is not specified and the solution must propose one.
+### Command line execution
+node mergedLists.js

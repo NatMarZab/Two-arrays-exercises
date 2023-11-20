@@ -28,6 +28,7 @@ function runTests() {
     console.log('Todas las pruebas pasaron con éxito');
 }
 
+// Command line execution
 if (require.main === module) {
     if (process.argv.length < 3) {
         runTests();
@@ -37,4 +38,5 @@ if (require.main === module) {
         console.log(`La cantidad de agua atrapada es: ${result}`);
     }
 }
+
 
